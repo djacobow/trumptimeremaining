@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+ </head>
+ <body>
+  <div class="title" id="titlediv">
+  <span>Trump Time Remaining</span>
+  <hr>
+  </div>
+  <div id="showdiv">
+      <div>
+          <p>National Nightmare Completion:</p>
+          <div id="progress_all">
+              <div id="progress_done"></div>
+          </div>
+      </div>
+      <hr>
+      <div>
+          Behind us:<br>
+          <span id="tte"></span><br>
+          (<span id="tpe"></span>%)
+      </div>
+      <hr>
+      <div>
+          To go:<br>
+          <span id="ttr"></span><br>
+          (<span id="tpr"></span>%)
+      </div>
+  </div>
+  <hr>
+  <div id="optdiv">
+      <b>Icon Options</b><br>
+      Reference:
+      <select id="ref_date">
+          <option value="inauguration">Inauguration</option>
+          <option value="election">Election Day</option>
+      </select>
+      <br>
+      Show:
+      <select id="icon_mode">
+          <option value="perc_complete">Percent Done</option>
+          <option value="perc_remaining">Percent Left</option>
+          <option value="days_complete">Days Done</option>
+          <option value="days_remaining">Days Left</option>
+      </select>
+  </div>
+  <script type="text/javascript" src="shared.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+ </body>
+</html>

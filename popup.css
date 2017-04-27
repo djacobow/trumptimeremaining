@@ -1,0 +1,20 @@
+body {
+ background: #404040;
+ color: white;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 75%; 
+}
+
+div.title {
+ font-size: 200%;
+}
+
+#progress_all {
+    width: 100%;
+    background-color: grey;
+}
+
+#progress_done {
+    width: 1%;
+    height: 30px;
+    background-color: green;
