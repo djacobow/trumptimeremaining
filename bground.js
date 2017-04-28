@@ -3,7 +3,11 @@
 var update = function() {
     chrome.storage.local.get(['options'], function(items) {
         if (items.hasOwnProperty('options')) {
-            options = items.options;
+            var optnames = Object.keys(items.options);
+            for (var i=0; i< optnames.length; i++) {
+                var optname = optnames[i];
+                options[optname]  = items.options[optname];
+            }
         }
 
         var times = calc_times();

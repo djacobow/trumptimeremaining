@@ -2,10 +2,8 @@
 var options = {
     ref_date: 'inauguration',
     icon_mode: 'days_remaining',
+    terms: '1',
 };
-
-var x = new Date('January 1, 2017 12:00:00');
-console.log(x);
 
 var config = {
     // These dates are in GMT, hence the +4 hours
@@ -16,8 +14,14 @@ var config = {
             election: new Date('November 8, 2016 04:00:00Z'),
         },
         end: {
-            inauguration: new Date('January 20, 2021 16:00:00Z'),
-            election: new Date('November 3, 2020 04:00:00Z'),
+            '1': {
+                inauguration: new Date('January 20, 2021 16:00:00Z'),
+                election: new Date('November 3, 2020 04:00:00Z'),
+            },
+            '2': {
+                inauguration: new Date('January 20, 2025 16:00:00Z'),
+                election: new Date('November 5, 2024 04:00:00Z'),
+            },
         }
     },
     basic_intervals: {
@@ -58,7 +62,7 @@ var dhms_to_str = function(dhms) {
 
 var calc_times = function() {
     var now = new Date();
-    var end = config.dates.end[options.ref_date];
+    var end = config.dates.end[options.terms][options.ref_date];
     var start = config.dates.start[options.ref_date];
     // console.log('ref_date: ' + options.ref_date);
     // console.log('start: '); console.log(start);

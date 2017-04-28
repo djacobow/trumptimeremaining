@@ -2,7 +2,7 @@
  "name": "Trump Time Remaining",
  "short_name": "Trump Time Remaining",
  "manifest_version": 2,
- "version": "0.0.2",
+ "version": "0.0.3",
  "description": "How much longer do we have to deal with this clown?",
  "browser_action": {
   "default_icon": {

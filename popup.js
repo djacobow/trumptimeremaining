@@ -1,5 +1,5 @@
 
-var opt_names = [ 'ref_date', 'icon_mode' ];
+var opt_names = [ 'ref_date', 'icon_mode', 'terms' ];
 
 var draw_progress = function(fr) {
     var elem = document.getElementById('progress_done');
@@ -36,11 +36,13 @@ var save_opts = function() {
 
 var load_opts = function(cb) {
     chrome.storage.local.get(['options'], function(items) {
-        if (items.hasOwnProperty('options')) {
-            options = items.options;
-        }
         for (var i=0; i<opt_names.length; i++) {
             var optname = opt_names[i];
+            if (items.hasOwnProperty('options')) {
+                if (items.options.hasOwnProperty(optname)) {
+                    options[optname] = items.options[optname];
+                }
+            }
             document.getElementById(optname).value = options[optname];
         }
         return cb();
