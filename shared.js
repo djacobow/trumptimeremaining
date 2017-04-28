@@ -4,17 +4,20 @@ var options = {
     icon_mode: 'days_remaining',
 };
 
+var x = new Date('January 1, 2017 12:00:00');
+console.log(x);
+
 var config = {
     // These dates are in GMT, hence the +4 hours
     // Based on EST (for Wash DC in Nov & Jan
     dates: {
         start: {
-            inauguration: new Date('January 20, 2017 16:00:00'),
-            election: new Date('November 8, 2016 04:00:00'),
+            inauguration: new Date('January 20, 2017 16:00:00Z'),
+            election: new Date('November 8, 2016 04:00:00Z'),
         },
         end: {
-            inauguration: new Date('January 20, 2021 16:00:00'),
-            election: new Date('November 3, 2020 04:00:00'),
+            inauguration: new Date('January 20, 2021 16:00:00Z'),
+            election: new Date('November 3, 2020 04:00:00Z'),
         }
     },
     basic_intervals: {
