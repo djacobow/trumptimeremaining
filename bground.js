@@ -26,7 +26,7 @@ var update = function() {
                 break;
             case 'days_complete': 
                 istr = times.elapsed.dhms.day.toString();
-                tstr = times.elapsed.dhms_str + 'are behind us';
+                tstr = times.elapsed.dhms_str + ' are behind us';
                 break;
             case 'perc_remaining': 
                 istr = Math.floor(times.remaining.frac * 100 + 0.5).toString() + '%';
