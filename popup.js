@@ -1,6 +1,12 @@
 
 var opt_names = [ 'ref_date', 'icon_mode', 'terms' ];
 
+var progress_names = [
+ 'National nightmare completion',
+ 'Winter of our discontent',
+ 'Worst of times',
+];
+
 var draw_progress = function(fr) {
     var elem = document.getElementById('progress_done');
     var width = Math.floor(fr*100 + 0.5);
@@ -62,6 +68,8 @@ var startup = function() {
         document.getElementById(opt_names[i]).addEventListener('change',save_opts); 
     }
     load_opts(function() {
+        var name = document.getElementById('progress_name');
+        name.innerText = progress_names[Math.floor(Math.random() * progress_names.length)] + ':';
         updater();
     });
 };
