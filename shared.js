@@ -10,17 +10,17 @@ var config = {
     // Based on EST (for Wash DC in Nov & Jan
     dates: {
         start: {
-            inauguration: new Date('January 20, 2017 16:00:00Z'),
-            election: new Date('November 8, 2016 04:00:00Z'),
+            inauguration: new Date('2017-01-20T16:00:00.000Z'),
+            election: new Date('2016-11-08T04:00:00.000Z'),
         },
         end: {
             '1': {
-                inauguration: new Date('January 20, 2021 16:00:00Z'),
-                election: new Date('November 3, 2020 04:00:00Z'),
+                inauguration: new Date('2021-01-20T16:00:00.000Z'),
+                election: new Date('2020-11-03T04:00:00.000Z'),
             },
             '2': {
-                inauguration: new Date('January 20, 2025 16:00:00Z'),
-                election: new Date('November 5, 2024 04:00:00Z'),
+                inauguration: new Date('2025-01-20T16:00:00.000Z'),
+                election: new Date('2024-11-05T04:00:00.000Z'),
             },
         }
     },
@@ -31,6 +31,8 @@ var config = {
         second: 1000,
     }
 };
+
+console.log(config);
 
 var ms_to_dhms = function(ms) {
     var rv = {};
