@@ -11,7 +11,6 @@ var update = function() {
         }
 
         var times = calc_times();
-
         var istr = '';
         var tstr = '';
         switch (options.icon_mode) {
