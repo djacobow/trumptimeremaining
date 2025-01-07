@@ -1,13 +1,13 @@
 {
  "name": "Trump Time Remaining",
  "short_name": "Trump Time Remaining",
- "manifest_version": 2,
- "version": "0.0.6",
- "description": "How much longer do we have to deal with this clown?",
+ "manifest_version": 3,
+ "version": "0.1.0",
+ "description": "How much longer do we have to deal with this fascist clown?",
  "options_ui":{
      "page":"popup.html"
  },
- "browser_action": {
+ "action": {
   "default_icon": {
    "38": "trumphair_38.png"
   },
@@ -15,7 +15,7 @@
   "default_popup": "popup.html"
  },
  "background": {
-  "scripts": ["shared.js", "bground.js"]
+  "service_worker": "bground.js"
  },
  "permissions": [ "storage" ],
  "icons": {

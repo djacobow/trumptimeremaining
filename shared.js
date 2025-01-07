@@ -2,7 +2,7 @@
 var options = {
     ref_date: 'inauguration',
     icon_mode: 'days_remaining',
-    terms: '1',
+    terms: '2',
 };
 
 var config = {
@@ -10,17 +10,13 @@ var config = {
     // Based on EST (for Wash DC in Nov & Jan
     dates: {
         start: {
-            inauguration: new Date('2017-01-20T16:00:00.000Z'),
-            election: new Date('2016-11-08T04:00:00.000Z'),
+            inauguration: new Date('2025-01-20T16:00:00.000Z'),
+            election: new Date('2024-11-05T04:00:00.000Z'),
         },
         end: {
-            '1': {
-                inauguration: new Date('2021-01-20T16:00:00.000Z'),
-                election: new Date('2020-11-03T04:00:00.000Z'),
-            },
             '2': {
-                inauguration: new Date('2025-01-20T16:00:00.000Z'),
-                election: new Date('2024-11-05T04:00:00.000Z'),
+                inauguration: new Date('2029-01-20T16:00:00.000Z'),
+                election: new Date('2028-11-07T04:00:00.000Z'),
             },
         }
     },
@@ -93,3 +89,4 @@ var calc_times = function() {
         },
     };
 };
+

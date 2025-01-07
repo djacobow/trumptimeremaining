@@ -1,4 +1,4 @@
-
+importScripts("./shared.js");
 
 var update = function() {
     chrome.storage.local.get(['options'], function(items) {
@@ -37,10 +37,11 @@ var update = function() {
                 break;
 
         }
-        chrome.browserAction.setTitle({
+        chrome.action.setTitle({
             title: tstr,
         });
-        chrome.browserAction.setBadgeText({
+        chrome.action.setBadgeText({
+            // tabId: activeTab.id,
             text: istr,
         });
     });
