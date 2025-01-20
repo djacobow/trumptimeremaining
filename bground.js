@@ -1,4 +1,10 @@
-importScripts("./shared.js");
+function isFirefox() {
+  return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+}
+
+if (!isFirefox()) {
+    importScripts("./shared.js");
+}
 
 var update = function() {
     chrome.storage.local.get(['options'], function(items) {
